@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!---->
+    <div class="wrapper">
+
+        <header>Header</header>
+
+        <nav>Nav</nav>
+
+        <div class="main-content">
+            <article>
+                <section>
+                   Section 1 
+                </section>
+
+                <section>
+                    Section 2
+                </section>
+            </article>
+
+            <aside>Aside</aside>
+        </div>
+
+        <footer>Footer</footer>
+    </div>
+
+    <style>
+        .wrapper{
+            width:1028px;
+            margin:0px auto;
+        }
+         header{
+            background: orange; 
+         }   
+         nav{
+             background: orange;
+             margin-top: 10px;
+         }
+         .main-content{
+             display: block;
+             position: relative;
+             overflow: hidden;
+             margin-top: 10px;
+         }
+         .main-content article{
+            float:left;
+            background-color: orange;
+            width:80%    
+         }
+
+         .main-content aside{
+             float:right;
+             width:18%;
+             background: orange;
+         }
+
+         footer{
+             background: orange;
+             margin-top:10px
+         }
+    </style>
+</body>
+</html>
