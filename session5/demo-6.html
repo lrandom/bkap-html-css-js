@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div class="content">
+        <div class="col-1"></div>
+        <div class="col-2"></div>
+
+        <div class="clearfix"></div>
+        <div class="footer">
+           kljaskldasjdlkasjdklasd
+        </div>
+
+   </div>
+
+
+   <style>
+     .clearfix{
+       clear: both;
+     }
+     .content{
+       border:1px solid red;
+       width:1024px;
+       height: 500px;
+       margin:0px auto;
+     }
+
+     .content .col-1{
+       background: red;
+       width: 80%;
+      height: 50px;
+       float:left;
+       position: relative;
+       overflow: hidden;
+     }
+
+     .content .col-2{
+       background: blue;
+       width: 19.5%;
+       height: 50px;
+       float: right;
+     }
+
+     .footer{
+       background: yellow;
+       height: 100px;
+     }
+   </style>
+</body>
+</html>
