@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-   <table border="1" cellpadding="100" cellspacing="50" width="500" height="200" align="center">
+<button onclick="toggleTable()">An/hien bang</button>
+   <table id="table" border="1" cellpadding="100" cellspacing="50" width="500" height="200" align="center" bgcolor="red">
        <thead>
          <tr>
              <th>Id</th>
@@ -38,5 +39,21 @@
 
        </tfoot>
    </table>
+
+<style>
+    .hidden{
+        display: none;
+    }
+
+    #table tr,#table td{
+        border:1px solid black;
+    }
+</style>
+
+<script>
+    function toggleTable(){
+        document.querySelector('#table').classList.toggle('hidden');
+    }
+</script>
 </body>
 </html>
