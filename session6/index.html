@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label for="user_name">Username</label>
+        <input type="text" id="user_name" required maxlength="5" minlength="2" name="user_name"/>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input disabled type="text" id="password" name="password"/>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div>
+        <label for="url">Url</label>
+        <input type="url" id="url" name="url"/>
+    </div>
+
+    <div>
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color">
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+    </div>
+
+    <div>
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time"/>
+    </div>
+
+
+    <div>
+        <div>Hobby</div>
+        <div>
+            <span>Game</span>
+            <input type="checkbox" name="hobbies[]"/>
+        </div>
+        <div>
+            <span>Soccer</span>
+            <input type="checkbox" name="hobbies[]"/>
+        </div>
+        <div>
+            <span>Coding</span>
+            <input type="checkbox" name="hobbies[]"/>
+        </div>
+
+    </div>
+
+    <div>
+        <div>Gender</div>
+        <div>
+            <span>Female</span>
+            <input type="radio" name="gender"/>
+        </div>
+
+        <div>
+            <span>Male</span>
+            <input type="radio" name="gender">
+        </div>
+    </div>
+
+    <div>
+        <input type="hidden" value="10"/>
+    </div>
+
+    <div>
+        <label for="content">Content</label>
+        <textarea name="content" id="content" placeholder="Please input content"></textarea>
+    </div>
+
+
+    <button>Login</button>
+    <input type="submit" value="Login"/>
+</form>
+</body>
+</html>
