@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0px auto;
+    width: 1028px;
+    border: 1px solid red;
+}
+
+html {
+    font-size: 10px;
+}
+
+.wrapper > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.wrapper > nav a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+
+.wrapper > nav img.logo {
+    width: 100px
+}
+
+.wrapper nav > div:first-child {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem
+}
+
+
+/*.wrapper > .banner img {
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
+}*/
+
+.wrapper > .banner {
+    height: 40rem;
+    width: 100%;
+    /*
+        background-image: url("chicken-swing.png");
+        background-repeat: no-repeat;
+        background-size: cover;*/
+    background: #2F80ED url("chicken-swing.png") no-repeat center center;
+    background-size: cover;
+    margin-top: 1rem;
+}
+
+.wrapper > .main-content {
+    margin-top: 1rem;
+    border: 1px solid blue;
+}
+
+.wrapper > .main-content .inner-content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.wrapper > .main-content .inner-content .card {
+    width: 50%;
+    overflow: hidden;
+}
+
+.wrapper > .main-content .inner-content .card img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper > .main-content .inner-content .card .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.wrapper > .main-content .inner-content .card .price {
+    color: #F01D1D;
+    font-size: 1.4rem;
+}
+
+
+
+
+
