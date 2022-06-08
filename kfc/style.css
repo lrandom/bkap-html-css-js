@@ -63,14 +63,21 @@ html {
     border: 1px solid blue;
 }
 
+/*
 .wrapper > .main-content .inner-content {
     display: flex;
     gap: 1.5rem;
-}
+}*/
 
 .wrapper > .main-content .inner-content .card {
-    width: 50%;
+    width: 48%;
     overflow: hidden;
+    float: left;
+    margin-top: 0.5rem;
+}
+
+.wrapper > .main-content .inner-content .card:nth-child(even) {
+    margin-left: 4%;
 }
 
 .wrapper > .main-content .inner-content .card img {
