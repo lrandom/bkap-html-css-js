@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    Lorem Ipsum dolor sit amen
+</div>
+
+<ol>
+    <li>PHP</li>
+    <li>Java</li>
+    <li>C#</li>
+</ol>
+
+<div class="parent">
+    <div></div>
+</div>
+
+<p>
+    Selection ABC
+</p>
+
+
+<ul>
+    <li>PHP</li>
+    <li>PHP</li>
+    <li>PHP</li>
+    <li>PHP</li>
+</ul>
+
+
+<input disabled="disabled"/>
+
+<a>Hover Me</a>
+<style>
+    /*pseudo classess*/
+    ul li:first-child {
+        color: red
+    }
+
+    ul li:last-child {
+        color: red
+    }
+
+    ul li:nth-child(2) {
+        color: blue;
+    }
+
+    a:hover {
+        background: red;
+    }
+
+    input:disabled {
+        background: red;
+    }
+
+    /*pseudo element*/
+    div::first-letter {
+        color: red
+    }
+
+    ol li::marker {
+        color: red;
+        background: red;
+    }
+
+    .parent::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        display: block;
+        background: red;
+    }
+
+    .parent::after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        display: block;
+        background: red;
+    }
+
+    p::selection {
+        color: red;
+        background: blue;
+    }
+
+</style>
+</body>
+</html>
