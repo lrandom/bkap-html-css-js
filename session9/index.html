@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</div>
+
+<style>
+    .container{
+        max-width: 1024px;
+        margin: 0px auto;
+    }
+
+    .container .content{
+        display: flex;
+        flex-wrap: wrap;
+        gap:5px
+    }
+
+    .container .content .card{
+        background: red;
+        flex-basis: 45%;
+        height: 200px;
+    }
+
+    /*trên các thiết bị di động*/
+    @media (max-width: 576px) {
+        .container .content .card {
+            flex-basis: 100%;
+            background: green;
+        }
+    }
+
+    @media screen and (min-width:576px) and (max-width: 768px){
+        .container .content .card{
+            background: rebeccapurple;
+        }
+    }
+</style>
+</body>
+</html>
