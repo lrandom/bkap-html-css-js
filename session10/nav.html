@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <nav>
+       <div>
+           <a>
+               Home
+           </a>
+
+       </div>
+
+       <div class="drop-menu">
+           <a>
+               <span>News</span>
+           </a>
+
+           <ul>
+               <li><a href="">Sport</a></li>
+               <li><a href="">Heath</a></li>
+               <li><a href="">Heath</a></li>
+           </ul>
+       </div>
+
+   </nav>
+
+   <style>
+       nav{
+           display: flex;
+       }
+
+       .drop-menu {
+           position: relative;
+       }
+
+       ul,li{
+           padding:0px;
+           margin:0px;
+           list-style: none;
+       }
+
+       nav .drop-menu:hover ul{
+           display: block;
+           color:red
+       }
+       nav ul{
+           position: absolute;
+           left:0px;
+           top:13px;
+           background: white;
+           display: none;
+       }
+   </style>
+</body>
+</html>
