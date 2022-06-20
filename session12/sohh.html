@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let num = prompt("Vui long nhap mot so");
+    let total = 0;
+    for (let index = 1; index < num; index++) {
+        if (num % index == 0) {
+            total += index;
+        }
+    }
+
+    if (total == num) {
+        alert("Day la so HH");
+    } else {
+        alert("Day ko phai so HH");
+    }
+
+</script>
+
+</html>
