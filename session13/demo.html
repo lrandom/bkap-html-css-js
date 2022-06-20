@@ -73,6 +73,18 @@
      // }
      // total(10,20);//30
 
+
+
+     function a(num){
+         num += 10;
+         console.log(num);
+         return num;
+     }
+
+     let num1 = 10;
+     console.log(a(num1));//truyền tham trị, truyền giá trị 10
+     console.log(num1);//10
+
      const van = {
          age: 25,
          name: "Van",
@@ -81,29 +93,14 @@
          }
      }
 
-     const can = {
-         age: 16,
-         name: "Can",
-         coding:function (){
-             console.log("Vua code vua nhau");
-         }
-     }
-
-     function a(num){
-         num += 10;
-         return num;
-     }
-
-     let num1 = 10;
-     a(num1);//truyền tham trị
-     console.log(num1);//10
-
      //truyền tham chiếu
      function b(obj){
-         obj.age=30;
+         obj.age+=30;
      }
      b(van);
-     console.log(van.age);//30
+     console.log(van.age);//55
+
+
    </script>
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var age = 20; //global scope
+
+       function printAge(){
+           console.log(age);//20
+       }
+
+       function printAge2(){
+           if(true){
+               console.log(age);//20
+           }
+       }
+
+       printAge();
+       printAge2();
+
+       //function scope
+       function printName(){
+
+           //block scope
+           if(true) {
+               let name1 = "Luan";
+           }
+           console.log(name1);
+       }
+       printName();
+
+
+       //lexical scope
+       function a(){
+           let age = 10
+           function b(){
+                console.log(age);
+           }
+       }
+
+       //closures trong javascript
+       function a(){
+           let age = 10
+           return function b() {
+               age+=20;
+               return age;
+           }
+       }
+
+       const c = a();//giải phóng bộ nhớ
+       //c=function b(){
+       //
+       // }
+       console.log(c());//30
+
+
+
+
+
+
+   </script>
+</body>
+</html>
