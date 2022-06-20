@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      const arr1 = new Array('Luan',1,2,3,4,5);
+      const arr2 = ["Luan",1,2,3,5,6];
+      const arr3=[];
+      arr3[0]=1;
+      arr3[1]="Căn";
+      arr3["name"]="Luan";
+
+      console.table(arr1);
+      console.table(arr2);
+      console.table(arr3);
+
+      //key is only number
+      for (let i = 0; i < arr1.length; i++) {
+          console.log(arr1[i]);
+      }
+
+      //key not number or number
+      arr1.forEach(function (value,index){
+          console.log(value);
+      })
+
+      for(let key in arr3){
+          console.log(arr3[key]);
+      }
+  </script>
+</body>
+</html>
