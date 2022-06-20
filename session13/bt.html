@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+     const arr = [4,5,2,3,1,10,9,12];
+     let sum = 0;
+     for (let i = 0; i < arr.length; i++) {
+         sum+=arr[i];
+     }
+     console.log("Tong la "+sum);
+
+     //[4,5,2,3,1,10,9,12]
+     for (let i = 0; i < arr.length-1; i++) {
+         for(let j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                //swap - đổi vị trí hai phần tử
+                let tmp = arr[i];
+                arr[i]=arr[j];
+                arr[j]=tmp;
+            }
+         }
+     }
+
+     console.log(arr);
+  </script>
+</body>
+</html>
