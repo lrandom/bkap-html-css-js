@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form onsubmit="return validation()">
+    <div>
+      <label for="full_name">
+        Họ tên
+      </label>
+      <input type="text" name="full_name" class="full_name" id="full_name"/>
+    </div>
+    <div class="error" id="full_name_error"></div>
+
+    <div>
+      <label for="password">
+        Password
+      </label>
+      <input type="password" name="password" class="password" id="password"/>
+    </div>
+    <div class="error" id="password_error"></div>
+
+    <button>Submit</button>
+  </form>
+
+  <script>
+    function validation() {
+      //reset lại text của error
+      const errors = document.querySelectorAll('.error');
+      for (let i = 0; i < errors.length; i++) {
+        errors[i].innerText = '';
+      }
+
+      //lấy node(đối tượng) tương ứng với input có id là full_name
+      const inputFullNameNode = document.querySelector('#full_name');
+      const txtFullName = inputFullNameNode.value;//trả về nội dung người dùng điền vào input này
+      if(!txtFullName){
+        document.querySelector('#full_name_error').innerText='Vui lòng điền full name';
+        return false;
+      }
+
+      const inputPasswordNode = document.querySelector('#password');
+      const txtPassword = inputPasswordNode.value;//trả về nội dung người dùng điền vào input này
+      if(!txtPassword){
+        document.querySelector('#password_error').innerText='Vui lòng điền mật khẩu';
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+   <style>
+     .error{
+       color:red;
+     }
+   </style>
+</body>
+</html>

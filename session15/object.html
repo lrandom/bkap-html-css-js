@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      //liệt kê
+      const van = {
+          name:"Văn",
+          age:24,
+          playSport:function(){
+              alert("Tôi đi tập gym");
+          },
+          eat:function (){
+              alert("Tôi ăn sáng");
+          },
+          studying:function (){
+              alert("Tôi đi học");
+          }
+      }
+
+      console.log(van.name);//Văn
+      van.playSport();
+      van.eat();
+      van.studying();
+
+      //function constructor
+      //function Person(name,age){
+      //     this.name = name;
+      //     this.age = age;
+      //     this.playSport = function (){
+      //         alert(this.name + " đi chơi thể thao");
+      //     }
+      //     this.eat=function (){
+      //         alert(this.name + " ăn sáng");
+      //     }
+      //     this.studying = function (){
+      //         alert(this.name+ " đi học");
+      //     }
+      // }
+
+
+
+      class Person {
+          constructor(name,age) {
+              this.name = name;
+              this.age = age;
+          }
+
+          playSport(){
+              alert(this.name + " đi chơi thể thao");
+          }
+
+          eat(){
+              alert(this.name + " ăn sáng");
+          }
+
+          studying(){
+              alert(this.name+ " đi học");
+          }
+      }
+          const can = new Person("Căn",23);
+          can.playSport();
+          can.eat();
+          can.studying();
+
+          const duc = new Person("Đức",22);
+          duc.playSport();
+          duc.eat();
+          duc.studying();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <div id="hello">Hello BKAP</div>
+
+   <span class="hello">Hello</span>
+   <span class="hello">Hello</span>
+   <span class="hello">Hello</span>
+   <span class="hello">Hello</span>
+   <span class="hello">Hello</span>
+
+   <span>Xin chao</span>
+   <button onclick="changeText()">Change Text</button>
+
+   <div id="wrapper">
+       <div class="content">
+           <div class="column"></div>
+       </div>
+   </div>
+
+<script>
+    function changeText(){
+        // const nodeHello = document.getElementById("hello");
+        // nodeHello.innerText= "Hello Việt Nam";
+        //const nodes = document.getElementsByTagName('span');
+        //const nodes = document.getElementsByClassName('hello');
+        const column = document.querySelector('#wrapper .content .column');
+        const node = document.querySelector('#hello');
+        const nodes = document.querySelectorAll('.hello');
+        for (let i = 0; i < nodes.length; i++) {
+            nodes[i].innerText = "Hi";
+        }
+    }
+</script>
+</body>
+</html>
