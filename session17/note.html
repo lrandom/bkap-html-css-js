@@ -33,7 +33,7 @@
                 <textarea class="content" placeholder="Nhập nội dung note"></textarea>
             </div>
             <div>
-                <button>Cập nhật</button>
+                <button onclick="updateNote()">Cập nhật</button>
             </div>
         </form>
     </div>
@@ -44,7 +44,10 @@
         <ul>
 
         </ul>
-        <button onclick="showAddNoteForm()">Thêm ghi chú</button>
+        <div>
+            <button onclick="showAddNoteForm()">Thêm ghi chú</button>
+            <button onclick="clearAll()" style="background: red">Xóa hết</button>
+        </div>
     </div>
 </div>
 
@@ -77,6 +80,26 @@
         margin:0px;
     }
 
+    button{
+        margin:0px auto;
+        padding:10px;
+        color:white;
+        border:none;
+        background: #2F80ED;
+        margin-top:10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button.btn-delete{
+        background: red;
+    }
+
+    .note-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 </style>
 </body>
 </html>
