@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input id="email" onblur="checkValidEmail()" type="text"/>
+  <p class="error error-email"></p>
+
+  <input id="phone" onblur="checkPhone()" type="text"/>
+  <p class="error error-phone"></p>
+  <script>
+      function checkValidEmail(){
+          const email = document.querySelector('#email');
+          const txtEmail = email.value;
+          const regex =  /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //check xem email có đúng định dạng hay không
+          const isValid = regex.test(txtEmail);
+          if(!isValid){
+              document.querySelector('.error-email').innerText="Email không đúng định dạng";
+          }else{
+              document.querySelector('.error-email').innerText="";
+          }
+      }
+
+      function checkPhone(){
+          const phone = document.querySelector('#phone');
+          const txtPhone = phone.value;
+          const regex = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
+          const isValid = regex.test(txtPhone);
+          if(!isValid){
+              document.querySelector('.error-phone').innerText = "Số điện thoại Việt Nam không đúng định dạng";
+          }else{
+              document.querySelector('.error-phone').innerText = "";
+          }
+      }
+  </script>
+</body>
+</html>

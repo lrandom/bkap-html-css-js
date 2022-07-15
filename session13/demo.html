@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     //alert("Test");
+     // const value = prompt("Vui long nhap vao cai gi do hay hay");
+     // alert(value);
+     // let a = "1";//string
+     // console.log(typeof parseInt(a));
+     // console.log(typeof parseFloat(a));
+     // const c = confirm("Ban đã đủ 18 tuổi chưa");
+     // if(!c){
+     //     alert("Next");
+     // }else{
+     //     alert("Let go to party")
+     // }
+
+     // const event = setTimeout(()=>{
+     //     alert("Test");
+     // },5000);
+     // clearInterval(event);
+
+     // let count = 0;
+     // const event = setInterval(()=>{
+     //     console.log("Test");
+     //     count++;
+     //     if(count>10){
+     //         clearInterval(event);
+     //     }
+     // },1000);
+
+     //không có tham số, ko có giá trị trả về
+     // function total1(){
+     //     console.log(5+10);
+     // }
+     //
+     // total1();//15
+     //
+     // //có tham số, có giá trị trả về
+     // function total(a,b){
+     //     return a+b;
+     // }
+     // const sum = total(10,20);
+     // console.log(sum);//30
+
+     //first citi-zen function
+     //một hàm đc sử dụng như một giá trị, có thể được gán vào biến, được làm tham số cho một hàm khác
+     //định nghĩa sử dụng hàm nặc danh
+     // const total = function(a,b){
+     //     return a+b;
+     // }
+     // const total1 = total;//giá giá trị của total vào total1
+     // console.log(total1(10,20));//30
+
+
+     //định nghĩa bằng từ khóa new
+     // const total = new Function('a','b','return a+b');
+     // const sum = total(10,20);
+     // console.log(sum);
+
+     //ES6, JS 2017, hàm mũi tên
+     //mất context
+     //không bị mất context JavaScript
+     // const total = (a,b)=>{
+     //     return a+b;
+     // }
+     // total(10,20);//30
+
+
+
+     function a(num){
+         num += 10;
+         console.log(num);
+         return num;
+     }
+
+     let num1 = 10;
+     console.log(a(num1));//truyền tham trị, truyền giá trị 10
+     console.log(num1);//10
+
+     const van = {
+         age: 25,
+         name: "Van",
+         gyming:function (){
+             console.log("Tap gym");
+         }
+     }
+
+     //truyền tham chiếu
+     function b(obj){
+         obj.age+=30;
+     }
+     b(van);
+     console.log(van.age);//55
+
+
+   </script>
+</body>
+</html>

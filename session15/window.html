@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="goBack()">go back</button>
+<button onclick="goToGoogle()">Go to Google</button>
+  <script>
+      console.log(history.length);
+        function goBack(){
+            history.back();
+        }
+
+
+      console.log(location.href);
+       function goToGoogle(){
+           location.href= "https://google.com.vn";
+       }
+  </script>
+</body>
+</html>

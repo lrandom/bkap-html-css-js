@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="wrapper">
+    <!--ADD NOTE-->
+    <div class="add-note-ui hidden">
+        <h4>Thêm ghi chú</h4>
+        <form onsubmit="return saveNote()">
+            <div>
+                <input type="text" class="title" placeholder="title"/>
+            </div>
+            <div>
+                <textarea class="content" placeholder="Nhập nội dung note"></textarea>
+            </div>
+            <div>
+                <button>Lưu trữ</button>
+            </div>
+        </form>
+    </div>
+
+    <!--EDIT NOTE-->
+    <div class="edit-note-ui hidden">
+        <h4>Sửa ghi chú</h4>
+        <form>
+            <div>
+                <input type="text" class="title" placeholder="title"/>
+            </div>
+            <div>
+                <textarea class="content" placeholder="Nhập nội dung note"></textarea>
+            </div>
+            <div>
+                <button onclick="updateNote()">Cập nhật</button>
+            </div>
+        </form>
+    </div>
+
+    <!--LIST NOTE-->
+    <div class="list-note-ui">
+        <h4>Danh sách ghi chú</h4>
+        <ul>
+
+        </ul>
+        <div>
+            <button onclick="showAddNoteForm()">Thêm ghi chú</button>
+            <button onclick="clearAll()" style="background: red">Xóa hết</button>
+        </div>
+    </div>
+</div>
+
+<script src="note.js" type="text/javascript"></script>
+<style>
+    .wrapper {
+        margin: 0px auto;
+        width: 600px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .list-note-ui ul ,.list-note-ui li{
+        padding:0px ;
+        margin:0px;
+        list-style: none;
+    }
+
+    .list-note-ui li{
+        border:1px solid #cdcdcd;
+        padding:5px;
+        margin-top:10px;
+        border-radius: 10px;
+    }
+    .list-note-ui li h5{
+        font-size: 24px;
+        padding:0px;
+        margin:0px;
+    }
+
+    button{
+        margin:0px auto;
+        padding:10px;
+        color:white;
+        border:none;
+        background: #2F80ED;
+        margin-top:10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    button.btn-delete{
+        background: red;
+    }
+
+    .note-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+</body>
+</html>
