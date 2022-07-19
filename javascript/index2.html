@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   //console.log(this);
+/*   const luan = {
+       name:"Nguyen Thanh Luan",
+       callMe: function () {
+           console.log(this.name);
+       },
+   }*/
+  // luan.callMe();
+
+
+  /* function higher(func) {
+       func();
+   }*/
+
+   //higher(luan.callMe);
+
+/*   const luan2 = {
+       name:"Nguyen Thanh Luan",
+       callMe: function (){
+           const that = this;
+           const abc = function () {
+               console.log(that);//Nguyen Thanh Luan
+           };
+           abc();
+       },
+   }*/
+   const luan2 = {
+       name:"Nguyen Thanh Luan",
+       callMe: function (){
+           const abc = ()=> {
+               console.log(this);//Nguyen Thanh Luan
+           };
+           abc();
+       },
+   }
+   luan2.callMe();
+
+   //call, apply, bind
+</script>
+</body>
+</html>

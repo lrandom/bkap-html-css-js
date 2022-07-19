@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   //khai bao bien
+   //scope
+   //ham
+   //closures
+   //object
+   //context
+
+   //DOM API
+
+   <script>
+       // var myName = "Nguyen Thanh Luan";
+       // let myName2 = "Nguyen Thanh Luan";
+       // const myName3 = "Nguyen Thanh Luan";
+
+       //khac nhau ve scope
+       //scope - pham vi "nhin thay dc" cua bien
+       //toàn cục : nhìn thấy đc ở bất kỳ đâu trong ctrinh
+       //cục bộ: cục bộ trong hàm(nhìn thấy trong hàm), cục bộ trong khối lệnh
+       //lexical: phạm vi của một hàm khai báo trong một hàm khác
+
+/*
+       var so = 20;
+       var so = 30;
+*/
+
+
+/*
+       let so1 = 20;
+       so1 = 30;
+       function total() {
+           if(true){
+               let a = 10;
+               console.log(a); //10
+               if(true){
+                   console.log(a); //10
+               }
+           }
+           //console.log(a); //10
+       }
+       total();
+*/
+
+       //lexical
+  /*     function A() {
+           let so = 20
+           function B() {
+                console.log(so);
+           }
+
+           function C() {
+               function D() {
+                    console.log(so);
+               }
+           }
+       }*/
+
+
+       //first citizen function
+       //-> một hàm trong JS có thể được sử dụng như một giá trị: có thể gán vào biến, có thể dùng như tham số
+/*       const total = function () {
+
+       };*/
+
+
+       //func là callback function
+       //callMe là higher order function
+       //callback function được sử dụng như một hook để móc code vào trong
+       // hàm higher order function khi gọi thực thi hàm higher order function
+       function callMe(a,b,function1) {
+           let total = a + b;
+           function1(total);
+       }
+
+       //Luan dung
+       callMe(10, 20, function (total) {
+           console.log(total);
+       });
+
+       //Can dung
+       callMe(10, 20, function (total) {
+           let multiple = total*2;
+           console.log(multiple);
+       });
+
+
+       //hàm mũi tên
+       //function setTimeout(func,delay){
+           //delay
+           //func()
+       // }
+
+       function callMe(a,b, func, func2) {
+            setTimeout(function(){
+                  let total = a+b;
+                  let multiple = a*b;
+                  let divide = a/b;
+                  func(total,multiple,divide);
+            },3000)
+       }
+
+       //console.log(callMe(10, 20));
+       callMe(10,20,function (t,m,d){
+           //console.log(t);
+           console.log(m);
+       })
+
+       //để khai báo hàm trong JS: 3
+       //dùng từ khóa function
+       //khai báo như một biến - hàm nặc danh
+       //dùng từ khóa new
+       //hàm mũi tên (ES6)
+
+       function total1() {
+
+       }
+
+       //cach khai bao nac danh
+       const total2 = function () {
+
+       };
+
+       //dung tu khoa new
+       const total3 = new Function('a','b','return a+b');
+
+       const total4 = ()=>{
+
+       }
+
+       //hàm tự gọi chính bản thân nó - self invoke function
+       (function () {
+           console.log("X");
+       })();
+
+       //tạo object - 2 cách
+       //khai báo thông qua từ khóa new (constructor function hoặc class)
+       //khai báo thông qua cách liệt kê (literal object)
+       const hung = {
+           name: 'Hồ Xuân Hùng',
+           age: 23,
+           address: 'Cầu Giấy',
+           diHoc: function () {
+               console.log("Đi học muộn");
+           },
+       }
+       console.log(hung.name);
+       hung.diHoc();
+       console.log(hung['name']);
+
+       //thong qua new
+       //constructor function
+       //ham khoi tao
+       function Student(name,age,address) {
+           this.name = name;
+           this.age = age;
+           this.address = address;
+           this.diHoc = function () {
+               console.log("Đi học muộn");
+
+           };
+       }
+
+       const can = new Student("Căn", 20, "Ninh Bình");
+       const duc = new Student("Đức", 21, "Ninh Bình");
+
+       //2017 - ES6
+       class Student2{
+           constructor(name,age,address) {
+               this.name  = name;
+               this.age = age;
+               this.address=address;
+           }
+
+           diHoc() {
+               console.log("Đi học muộn")
+           }
+       }
+
+       const dung = new Student2("Dũng", 22, "Hà Nội");
+   </script>
+</body>
+</html>
