@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+    <div>
+        Hello
+    </div>
+    <div>
+        <span>
+
+        </span>
+    </div>
+    <div>
+        <span>
+
+        </span>
+    </div>
+    <button onclick="changeText()">Change Text</button>
+</div>
+
+<script>
+    function changeText(){
+        const spanNode = document.querySelector('div > div:nth-child(3) > span');
+        const firstDivNode = document.querySelector('div > div:first-child');
+        console.log(spanNode);
+        console.log(firstDivNode);
+        spanNode.innerText = firstDivNode.innerText;
+    }
+</script>
+
+</body>
+</html>
