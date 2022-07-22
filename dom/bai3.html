@@ -7,13 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Khi click vào nút reverse, hãy đổi ngược vị trí A,B,C,D -> D,C,B,A -->
-    <div>
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
-        <div>D</div>
-    </div>     
-    <button>Reverse</button>
+<!--Khi click vào nút reverse, hãy đổi ngược vị trí A,B,C,D -> D,C,B,A -->
+<div>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+</div>
+<button onclick="reverse()">Reverse</button>
+
+<script>
+    function reverse() {
+        //C1
+        /*const divNodes = document.querySelectorAll('div > div');
+        let arr = [];
+        for (let i = 0; i < divNodes.length; i++) {
+            arr.push(divNodes[i].innerText);
+        }
+        arr = arr.reverse();
+        let newContent = '';
+        for (let i = 0; i < arr.length; i++) {
+            newContent+=`<div>${arr[i]}</div>`;
+            console.log(newContent);
+        }
+        document.querySelector('body > div').innerHTML = newContent;*/
+
+        //C2
+        const arr = document.querySelectorAll("div > div")
+        const arr1 = arr.length / 2
+        for (let i = 0; i < arr1 - 1; i++) {
+            let tg;
+            tg = arr[i].innerText;
+            arr[i].innerText = arr[arr.length - 1 - i].innerText;
+            arr[arr.length - 1 - i].innerText = tg;
+        }
+
+    }
+</script>
 </body>
 </html>

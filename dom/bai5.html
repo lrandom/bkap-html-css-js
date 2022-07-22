@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="parent">
+    <div class="box"></div>
+</div>
+
+<button onclick="startMove()">Start Move</button>
+<script>
+    function startMove() {
+        const box = document.querySelector('.box');
+        //callback hell - pyramid of doom
+        setTimeout(() => {
+            box.style.right = '0px';
+            setTimeout(() => {
+                box.style.bottom = '0px';
+                setTimeout(() => {
+                    box.style.removeProperty('right');//xoá right đi
+                    box.style.left = '0px';
+                    setTimeout(() => {
+                        box.style.removeProperty('bottom');
+                        box.style.top = '0px';
+                    }, 2000)
+                }, 2000)
+            }, 2000);
+        }, 2000)
+    }
+
+
+</script>
+<style>
+    .parent {
+        border: 1px solid red;
+        width: 500px;
+        height: 500px;
+        position: relative;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        background: red;
+    }
+</style>
+</body>
+</html>
