@@ -5,62 +5,55 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
+<script>
+    setTimeout(() => {
+        let a = 10;
+        let b = 20;
+        let c = a + b;
+
+        console.log(c);
+    }, 2000);
+
+    const p = new Promise((res, rej) => {
         setTimeout(() => {
             let a = 10;
             let b = 20;
             let c = a + b;
-
-            console.log(c);
+            res(c);
         }, 2000);
+    });
 
-        const p = new Promise((res,rej)=>{
-           setTimeout(() => {
-               let a = 10;
-               let b = 20;
-               let c = a + b;
-               res(c);
-           }, 2000);
+    p.then(result => {
+        console.log(result);
+    });
+
+    const getPromise = function () {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                res();
+            }, 2000);
         });
+    };
 
-        p.then(result=>{
-            console.log(result);
+    function startMove2() {
+        const box = document.querySelector('.box');
+        new Promise((res, rej) => {
+            getPromise();
+        }).then(() => {
+            box.style.right = '0px';
+            getPromise();
+        }).then(() => {
+            box.style.bottom = '0px';
+            getPromise();
+        }).then(() => {
+            box.style.removeProperty('right');
+            box.style.left = '0px';
+            getPromise();
+        }).then(() => {
+            box.style.removeProperty('bottom');
+            box.style.top = '0px';
         });
-
-
-        function startMove2() {
-            const box = document.querySelector('.box');
-            new Promise((res, rej) => {
-                setTimeout(() => {
-                    res();
-                }, 2000);
-            }).then(() => {
-                box.style.right = '0px';
-                return new Promise((res, rej) => {
-                    setTimeout(() => {
-                        res();
-                    }, 2000);
-                });
-            }).then(() => {
-                box.style.bottom = '0px';
-                return new Promise((res, rej) => {
-                    setTimeout(() => {
-                        res();
-                    }, 2000);
-                });
-            }).then(() => {
-                box.style.removeProperty('right');
-                box.style.left = '0px';
-                return new Promise((res, rej) => {
-                    setTimeout(() => {
-                        res();
-                    }, 2000);
-                });
-            }).then(() => {
-                box.style.removeProperty('bottom');
-                box.style.top = '0px';
-            });
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
